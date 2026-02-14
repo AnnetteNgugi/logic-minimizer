@@ -1,8 +1,10 @@
 #include <iostream>
 #include <vector>
-#include "input/Input.hpp"
-#include "minimizer/Minimizer.hpp"
-#include "output/Printer.hpp"
+#include <string>
+
+#include "input/input.h"
+#include "minimizer/minimizer.h"
+#include "output/output.h"
 
 int main() {
 
