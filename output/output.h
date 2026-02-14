@@ -3,7 +3,8 @@
 
 #include <vector>
 #include <string>
+#include "minimizer/minimizer.h"
 
-void printResult(const std::vector<std::string>& terms);
+void printResult(const MinimizeResult& result);
 
 #endif
