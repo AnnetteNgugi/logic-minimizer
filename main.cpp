@@ -18,8 +18,9 @@ int main() {
     std::vector<int> minterms = getMinterms(table);
 
     MinimizeResult result = minimize(n, minterms);
+    
+    printResult(n, table, result);
 
-    printResult(result);
 
     return 0;
 }
