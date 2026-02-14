@@ -1,25 +1,24 @@
 #include <iostream>
-#include "input/Input.h"
-#include "minimizer/Minimizer.h"
-#include "output/Printer.h"
-
-using namespace std;
+#include <vector>
+#include "input/Input.hpp"
+#include "minimizer/Minimizer.hpp"
+#include "output/Printer.hpp"
 
 int main() {
 
-    int n = input::getVariableCount();
+    int n = getVariableCount();
 
     if (n < 2 || n > 4) {
-        cout << "Invalid number of variables\n";
+        std::cout << "Invalid number of variables\n";
         return 0;
     }
 
-    auto table = input::getTruthTable(n);
-    auto minterms = input::getMinterms(table);
+    std::vector<int> table = getTruthTable(n);
+    std::vector<int> minterms = getMinterms(table);
 
-    auto result = minimizer::minimize(n, minterms);
+    std::vector<std::string> result = minimize(n, minterms);
 
-    output::printResult(result);
+    printResult(result);
 
     return 0;
 }
