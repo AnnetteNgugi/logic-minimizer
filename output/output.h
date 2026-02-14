@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include "minimizer/minimizer.h"
+#include "../minimizer/minimizer.h"
 
 void printResult(const MinimizeResult& result);
 

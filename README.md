@@ -1,34 +1,39 @@
-# Logic Minimizer (C++)
+# Logic Minimizer (K-Map) (C++)
 
 ## 📌 Description
-This is a modular C++ console application that generates a Sum of Products (SOP) expression from a truth table.
+A modular C++ console application that simplifies Boolean functions (2–4 variables) using Karnaugh-map logic and outputs the minimal SOP expression with grouping explanation.
 
 ## ✅ Features
-- Supports 2–4 variables
-- Clean file structure
-- Beginner friendly
-- Uses std:: (no global namespace pollution)
+- Accepts full truth table input
+- Displays the corresponding K-map (2×2, 2×4, 4×4)
+- Generates minimal SOP expression
+- Shows grouping details (group size, covered minterms, term produced)
+- Clean multi-file C++ structure
 
 ## 📁 Project Structure
-input → handles user input  
-minimizer → generates SOP terms  
-output → prints the result  
+input/ → user input
+minimizer/ → simplification logic
+output/ → K-map + result display
 
 ## ⚙️ Compile
-g++ main.cpp input/Input.cpp minimizer/Minimizer.cpp output/Printer.cpp -o logic
+g++ main.cpp input/input.cpp minimizer/minimizer.cpp output/output.cpp -o logic
 
 ## ▶️ Run
 ./logic
 
 ## 🧪 Example
-Input:
-2  
-0 1 1 1  
+# Input:
+1. Enter number of variables (2–4)
+2. Enter 2ⁿ output values in binary order
+Example for 3 variables:
+0 0 1 1 0 0 1 1
 
-Output:
-F = A'B + AB' + AB
+## Requirements
+- C++17 compatible compiler
+- g++
 
 ## 🚀 Future Improvements
-- Real Karnaugh Map grouping
-- Boolean simplification
-- K-map visual display
+- Don’t-care conditions
+- POS form output
+- Minterm input mode
+- GUI version
